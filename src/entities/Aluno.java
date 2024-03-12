@@ -1,6 +1,7 @@
 package entities;
 
 public class Aluno {
+	//sample object
 	
 	private String name;
 	private int idade;
@@ -32,6 +33,14 @@ public class Aluno {
 	public void setMatricula(int matricula) {
 		this.matricula = matricula;
 	}
-	///public String toString() {
-		//return x;
+	
+	public String toString(){
+		return name+"-"+matricula;
+	}
+	
+	public boolean equals(Object o) {
+		//N entendi nada
+		Aluno a =(Aluno)o;
+		return this.name.equals(a.name);
+	}
 }

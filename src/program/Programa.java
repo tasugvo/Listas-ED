@@ -31,8 +31,10 @@ public class Programa {
 			System.out.println("║   (3). TAD - Caixa Ilimitada   ║");
 			System.out.println("║   (4). TAD - Caixa de Alunos   ║");
 			System.out.println("║                                ║");
-			System.out.println("║   (5). Fechar Programa         ║");
-			System.out.println("║   (6). Sobre                   ║");
+			System.out.println("║   (5). TAD - Outros            ║");
+			System.out.println("║                                ║");
+			System.out.println("║   (6). Fechar Programa         ║");
+			System.out.println("║   (7). Sobre                   ║");
 			System.out.println("║                                ║");
 			System.out.println("╚════════════════════════════════╝");
 			System.out.println("");
@@ -56,10 +58,14 @@ public class Programa {
 				break;
 			}
 			case 5: {
-				chave = false;
+				program.Programa2.here();
 				break;
 			}
 			case 6: {
+				chave = false;
+				break;
+			}
+			case 7: {
 				about();
 				break;
 			}
