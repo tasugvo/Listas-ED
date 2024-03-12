@@ -132,6 +132,7 @@ public class listaSimples {
 			System.out.println("║        	   Fim               ║");
 			System.out.println("╚════════════════════════════════╝");
 			System.out.println();
+			
 		}
 		
 	}
