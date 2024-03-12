@@ -117,7 +117,7 @@ public class listaSimples {
 		}else {
 			System.out.println();
 			System.out.println("╔════════════════════════════════╗");
-			System.out.println("║          	 Inicio		         ║");
+			System.out.println("║          	 Inicio		     ║");
 			System.out.println("╚════════════════════════════════╝");
 			
 			for(int i=0 ; i<this.tamanho ; i++) {
