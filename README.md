@@ -1,0 +1,1 @@
+O programa conceitual consiste em uma coleção de implementações de listas em Java. Cada implementação é acompanhada de exemplos de uso e testes unitários para garantir a corretude e eficiência das operações.
