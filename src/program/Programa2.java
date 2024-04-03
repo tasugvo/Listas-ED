@@ -3,6 +3,7 @@ package program;
 import java.util.Scanner;
 
 import entities.Aluno;
+import structure2.listaEncadeada;
 import structure2.listaSimples;
 
 public class Programa2 {
@@ -19,9 +20,10 @@ public class Programa2 {
 			System.out.println("║       TAD - Outros/Testes      ║");
 			System.out.println("║________________________________║");
 			System.out.println("║                                ║");
-			System.out.println("║   (1). CRUD - Lista simples    ║");
+			System.out.println("║   (1). CRUD - Lista com Array  ║");
+			System.out.println("║   (2). CRUD - Lista Encadeada  ║");
 			System.out.println("║                                ║");
-			System.out.println("║   (2). Voltar				     ║");
+			System.out.println("║   (3). Voltar				     ║");
 			System.out.println("║                                ║");
 			System.out.println("╚════════════════════════════════╝");
 			System.out.println("");
@@ -32,7 +34,11 @@ public class Programa2 {
 				first();
 				break;
 			}
-			case 2: {
+			case 2:{
+				second();
+				break;
+			}
+			case 3: {
 				Programa.main(null);;
 				break;
 			}
@@ -92,6 +98,47 @@ public class Programa2 {
 	    } catch (IndexOutOfBoundsException ex) {
 	        System.out.println("Índice fora dos limites: " + ex.getMessage());
 	    }
+		
+	}
+	
+	public static void second() {
+		
+		listaEncadeada lista = new listaEncadeada();
+        
+        // Adiciona elementos à lista
+        lista.add("A");
+        lista.add("B");
+        lista.add("C");
+        lista.add("D");
+        
+        // Testa o método get
+        System.out.println("Elemento no índice 2: " + lista.get(2));
+        
+        // Testa o método indexOf
+        System.out.println("Índice do elemento 'C': " + lista.indexOf("C"));
+        
+        // Testa a remoção por índice
+        lista.remove(1); // Remove o elemento no índice 1
+        
+        // Testa a remoção por elemento
+        lista.remove("D"); // Remove o elemento "D"
+        
+        // Imprime a lista após as operações
+        System.out.println("Lista após operações:");
+        lista.print();
+        
+        // Indução a erro: tentativa de acesso a um índice inválido
+        try {
+            lista.get(10); // Tenta acessar um índice que não existe
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+		
+        // Indução a erro: tentativa de remover um elemento que não existe
+        boolean removed = lista.remove("E"); // Tenta remover um elemento que não existe
+        if (!removed) {
+            System.out.println("Erro na remoção por elemento: o elemento 'E' não foi encontrado na lista.");
+        }
 		
 	}
 	
