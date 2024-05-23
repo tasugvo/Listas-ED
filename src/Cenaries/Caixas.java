@@ -2,18 +2,15 @@ package Cenaries;
 
 import java.util.Scanner;
 
-import Executable.Program0;
+import Structures.caixaAlunos;
+import Structures.caixaInfinita;
+import Structures.caixaMultipla;
+import Structures.caixaSimples;
 
-import Cenaries.Caixas;
+import Cenaries.cManager;
 
-//listas
+public class Caixas {
 
-//pilhas e filas
-
-//arvores
-
-public class cManager {
-	
 	public static void Main() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -24,10 +21,10 @@ public class cManager {
 			System.out.println("");
 			System.out.println("╔═════════════════════════════╗");
 			System.out.println("║                             ║");
-			System.out.println("║   (1). Caixas               ║");
-			System.out.println("║   (2). Listas               ║");
-			System.out.println("║   (3). Pilhas e Filas       ║");
-			System.out.println("║   (4). Arvores      	      ║");
+			System.out.println("║   (1). Caixa Simples        ║");
+			System.out.println("║   (2). Caixa Multipla       ║");
+			System.out.println("║   (3). Caixa Ilimitada      ║");
+			System.out.println("║   (4). Caixa de Alunos      ║");
 			System.out.println("║                             ║");
 			System.out.println("║       (5). Voltar           ║");
 			System.out.println("║                             ║");
@@ -37,23 +34,27 @@ public class cManager {
 
 			switch (selecao) {
 			case 1: {
-				Caixas.Main();
+				caixaSimples CS = new caixaSimples();
+				CS.Tests();
 				break;
 			}
 			case 2: {
-				//TODO
+				caixaMultipla CM =  new caixaMultipla();
+				CM.Tests();
 				break;
 			}
 			case 3: {
-				//TODO
+				caixaInfinita CI = new caixaInfinita();
+				CI.Tests();
 				break;
 			}
 			case 4: {
-				//TODO
+				caixaAlunos CA = new caixaAlunos();
+				CA.Tests();
 				break;
 			}
 			case 5: {
-				Program0.main(null);
+				cManager.Main();
 				break;
 			}
 			
