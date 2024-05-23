@@ -33,11 +33,11 @@ public class Program0 {
 				break;
 			}
 			case 2: {
-				
+				//TODO
 				break;
 			}
 			case 3: {
-				
+				System.exit(0);
 				break;
 			}
 			case 4: {
@@ -68,5 +68,7 @@ public class Program0 {
 		System.out.println("╚════════════════════════════════╝");
 		System.out.println("");
 	}
+
+// Estrura em container mesmo, quero nem saber n to fazendo um novo windows	
 
 }

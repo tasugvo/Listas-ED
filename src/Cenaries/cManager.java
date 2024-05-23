@@ -3,6 +3,16 @@ package Cenaries;
 import java.util.Scanner;
 
 import Executable.Program0;
+import Structures.caixaMultipla;
+import Structures.caixaInfinita;
+import Structures.caixaAlunos;
+import Structures.caixaSimples;
+
+//listas
+
+//pilhas e filas
+
+//arvores
 
 public class cManager {
 	
@@ -15,13 +25,13 @@ public class cManager {
 		while (chave) {
 			System.out.println("");
 			System.out.println("╔═════════════════════════════╗");
-			System.out.println("║   				          ║");
-			System.out.println("║   (1). Caixas 		  	  ║");
-			System.out.println("║   (2). Listas       		  ║");
-			System.out.println("║   (3). Pilhas e Listas      ║");
-			System.out.println("║   (4). Arvores      		  ║");
 			System.out.println("║                             ║");
-			System.out.println("║       (5). Voltar     	  ║");
+			System.out.println("║   (1). Caixas               ║");
+			System.out.println("║   (2). Listas               ║");
+			System.out.println("║   (3). Pilhas e Filas       ║");
+			System.out.println("║   (4). Arvores      	      ║");
+			System.out.println("║                             ║");
+			System.out.println("║       (5). Voltar           ║");
 			System.out.println("║                             ║");
 			System.out.println("╚═════════════════════════════╝");
 			System.out.println("");
@@ -33,15 +43,15 @@ public class cManager {
 				break;
 			}
 			case 2: {
-				
+				//TODO
 				break;
 			}
 			case 3: {
-				
+				//TODO
 				break;
 			}
 			case 4: {
-				
+				//TODO
 				break;
 			}
 			case 5: {
@@ -70,13 +80,13 @@ public class cManager {
 		while (chave) {
 			System.out.println("");
 			System.out.println("╔═════════════════════════════╗");
-			System.out.println("║   				          ║");
-			System.out.println("║   (1). Caixa Simples 		  ║");
+			System.out.println("║                             ║");
+			System.out.println("║   (1). Caixa Simples        ║");
 			System.out.println("║   (2). Caixa Multipla       ║");
 			System.out.println("║   (3). Caixa Ilimitada      ║");
 			System.out.println("║   (4). Caixa de Alunos      ║");
 			System.out.println("║                             ║");
-			System.out.println("║       (5). Voltar     	  ║");
+			System.out.println("║       (5). Voltar           ║");
 			System.out.println("║                             ║");
 			System.out.println("╚═════════════════════════════╝");
 			System.out.println("");
@@ -84,19 +94,23 @@ public class cManager {
 
 			switch (selecao) {
 			case 1: {
-				
+				caixaSimples CS = new caixaSimples();
+				CS.Tests();
 				break;
 			}
 			case 2: {
-				
+				caixaMultipla CM =  new caixaMultipla();
+				CM.Tests();
 				break;
 			}
 			case 3: {
-				
+				caixaInfinita CI = new caixaInfinita();
+				CI.Tests();
 				break;
 			}
 			case 4: {
-				
+				caixaAlunos CA = new caixaAlunos();
+				CA.Tests();
 				break;
 			}
 			case 5: {
